@@ -6,10 +6,10 @@ console.log('This is your service-worker.js file!');
 
 const FILE_TO_CACHE = [
     "/",
-    "index.html",
-    "manifest.webmanifest",
-    "index.js",
-    "styles.css",
+    "/index.html",
+    "/manifest.webmanifest",
+    "/index.js",
+    "/styles.css",
     "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.css",
     "https://use.fontawesome.com/releases/v5.8.2/css/all.css",
     "icons/icon-192x192.png",
