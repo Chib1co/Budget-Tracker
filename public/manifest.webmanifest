@@ -4,17 +4,17 @@
     "icons": [
         {
             "src": "/icons/icon-192x192.png",
-            "sizes": "192x192",
+            "sizes": "169x169",
             "type": "image/png"
         },
         {
             "src": "/icons/icon-512x512.png",
-            "sizes": "512x512",
+            "sizes": "452x452",
             "type": "image/png"
         }
     ],
     "start_url": "/",
-    "background_color": "#11111",
+    "background_color": "#111111",
     "display": "standalone",
-    "theme_color": "#11111"
+    "theme_color": "#111111"
 }
