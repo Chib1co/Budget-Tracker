@@ -11,7 +11,7 @@ request.onupgradeneeded = event => {
 
 // Opens a transaction, accesses the objectStore and transactionIndex.
 request.onsuccess = event => {
-    const db = event.target.result;
+    db = event.target.result;
 
     //check if app is online before reading from db
     if (navigator.onLine) {
@@ -20,7 +20,7 @@ request.onsuccess = event => {
 };
 
 request.onerror = event => {
-    console.log(err)
+    console.log("Woops" + event.target.errorCode)
 };
 
 function saveRecord(record) {
@@ -55,4 +55,10 @@ function checkDatabase() {
     }
 };
 
+function deletePending() {
+    const transaction = db.transaction(["pending"], "readwrite");
+    const store = transaction.objectStore("pending");
+    store.clear();
+  }
+  
 window.addEventListener("online", checkDatabase)
