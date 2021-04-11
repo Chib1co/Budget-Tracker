@@ -30,7 +30,7 @@ self.addEventListener("install", function (evt) {
 //activate
 self.addEventListener("activate", function (evt) {
     evt.waitUntil(
-        cache.keys().then(keyList => {
+        caches.keys().then(keyList => {
             return Promise.all(
                 keyList.map(key => {
                     if (key !== STATIC_CACHE && key !== RUNTIME_CACHE) {
@@ -41,12 +41,12 @@ self.addEventListener("activate", function (evt) {
             )
         })
     );
-    self.ClientRectList.claim();
+    self.clients.claim();
 });
 
 //fetch
 self.addEventListener("fetch", function(evt) {
-    if(evt.request.url.includes("/api/")) {
+    if(evt.request.url.includes("/api/" && evt.request.method === "GET")) {
         evt.respondWith(
             caches.open(STATIC_CACHE).then(cache => {
                 return fetch(evt.request)
@@ -62,10 +62,8 @@ self.addEventListener("fetch", function(evt) {
     }
 
     evt.respondWith(
-        caches.open(STATIC_CACHE).then(cache => {
-            return cache.match(evt.request).then(response => {
+        caches.match(evt.request).then(response => {
                 return response || fetch(evt.request);
-            });
         })
     );
 });
