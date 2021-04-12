@@ -44,12 +44,12 @@ To use budget tracker locally, use http://localhost:3000 after completing the fo
 ```js
 git clone github.com/Chib1co/Budget-Tracker
 npm install
-node server.js
+npm start
 ```
 
 ## Learning
 
-This assignment already provided main functionality, I only had to add offline functionality. Which is using Progressive Web Application (PWA)
+This assignment already provided main functionality, but I had to add offline functionality. Which is using Progressive Web Application (PWA)
 
 <!-- LICENSE -->
 ## License
@@ -79,6 +79,6 @@ Tomomi Inoue
 
 Project Link: [https://github.com/Chib1co/Budget-Tracker](https://github.com/Chib1co/Budget-Tracker)
 
-Deployed page: [https://mighty-woodland-73486.herokuapp.com/?id=606925811ea8f78a92f25baa](https://mighty-woodland-73486.herokuapp.com/?id=606925811ea8f78a92f25baa)
+Deployed page: [https://secret-shore-51741.herokuapp.com/](https://secret-shore-51741.herokuapp.com/)
 
 
